@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  transition: 0.3 ease;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #3c2116;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.bg-brown {
+  background: rgb(85, 54, 38);
+  background: linear-gradient(
+    153deg,
+    rgba(85, 54, 38, 1) 0%,
+    rgba(60, 33, 22, 1) 100%
+  );
+}
+
+nav {
+  animation: navDown 1s ease;
+}
+@keyframes navDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.shadow {
+  box-shadow: 0 8px 5px rgba(36, 23, 16, 0.8);
+}
+.logo img{
+  height: 3.5rem;
+  border-radius: 100%;
+}
+
+nav ul li {
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  padding: 0 10px;
+  margin: 0 20px;
+  cursor: pointer;
+  position: relative;
+}
+.nav-link {
+  transition: color 0.3s, scale 0.5s;
+}
+.nav-link:hover {
+  color: white;
+  scale: 1.1;
+}
+
+nav ul li:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: wheat;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li:hover::after {
+  width: 100%;
+}
+
+.banner,
+.products {
+  background: #553626;
+  background: linear-gradient(
+    153deg,
+    rgba(85, 54, 38, 1) 0%,
+    rgb(60, 33, 22) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  width: 100%;
+}
+.contentImgRight {
+  position: relative;
+  width: 85%;
+}
+.contentRight {
+  animation: slideRight 1s ease;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.contentLeft {
+  animation: slideLeft 1s ease;
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.carousel-item{
+    animation: carouselSlide 1s ease-out;
+}
+
+@keyframes carouselSlide{
+  0%, 27.5%{
+    opacity: 0;
+    scale: 0.6;
+  }
+  30%, 100%{
+    opacity: 1 !important;
+    scale: 1 !important;
+  }
+}
+
+.outCar{
+
+    animation: carouselOut 2s linear;
+
+}
+
+@keyframes carouselOut{
+  0%, 85%, 100%{
+    opacity: 1;
+    scale: 1;
+  }
+  85.5%, 99.9%{
+    opacity: 0;
+    scale: 0.6;
+  }
+}
+
+
+@media (max-width: 765px) {
+  .rowContent {
+    flex-direction: column-reverse;
+  }
+  .boxLeft strong {
+    font-size: 0.9em !important;
+  }
+  .boxLeft h1 {
+    font-size: 2.2em !important;
+  }
+  .boxLeft p {
+    font-size: 0.8em !important;
+  }
+  .boxLeft {
+    width: 90%;
+  }
+}
+
+.boxLeft strong {
+  color: #c9a464;
+  font-size: 1.1em;
+}
+.boxLeft h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 2.4em;
+}
+.boxLeft p {
+  color: rgb(222, 195, 184);
+  font-size: 1em;
+}
+.buyBtn {
+  background-color: transparent;
+  color: whitesmoke;
+  border: 1.7px solid rgb(221, 182, 110);
+  border-radius: 11px;
+  width: 7rem;
+  height: 2.2rem;
+  font-weight: 100;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  box-shadow: 0 5px 10px rgba(221, 182, 110, 0.3);
+}
+
+.buyBtn:after {
+  content: ">>";
+  position: absolute;
+  opacity: 0;
+  font-size: 1.1rem;
+  top: 6px;
+  right: -5px;
+  transition: 0.1s;
+}
+
+.buyBtn:hover {
+  padding-right: 28px;
+  padding-left: 9px;
+  color: rgb(60, 33, 22);
+  font-weight: 600;
+  background-color: rgb(221, 182, 110);
+  border: none;
+  scale: 1.1rem;
+}
+
+.buyBtn:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+.buyBtn:active:after {
+  top: 5px;
+}
+
+.buyBtn:active {
+  background-color: transparent;
+  border: 1.7px solid rgb(221, 182, 110);
+  transform: translateY(1px);
+  box-shadow: 0 5px 10px rgba(221, 182, 110, 0.3);
+  color: whitesmoke;
+  font-weight: 100;
+}
+
+.carousel {
+  width: 70%;
+  height: 70%;
+}
+
+.bgImage {
+  background-image: url(images/dividerCof.jpg);
+  height: 230px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgFilter {
+  background: rgb(55, 30, 20);
+  background: linear-gradient(
+    180deg,
+    rgba(55, 30, 20, 1) 0%,
+    rgba(245, 222, 179, 0) 48%,
+    rgba(245, 222, 179, 1) 100%
+  );
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 748px) {
+  .popularCof {
+    height: 10px;
+  }
+  .line1 {
+    width: 35% !important;
+  }
+  .line2 {
+    width: 25% !important;
+  }
+}
+
+.aboutUs {
+  background-color: #f5deb3;
+  width: 100%;
+}
+
+.aboutContent {
+  margin-top: 50px;
+  height: 100%;
+}
+.title {
+  position: relative;
+}
+.aboutContent h1 {
+  text-align: left;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+}
+.line1 {
+  width: 20%;
+  height: 3px;
+  position: absolute;
+  border-radius: 5px;
+}
+.line2 {
+  width: 15%;
+  height: 3px;
+  background-color: rgb(33, 29, 29);
+  position: absolute;
+  border-radius: 5px;
+}
+.aboutRight img {
+  width: 80%;
+  border-radius: 27px 0px 27px;
+  margin-top: 15px;
+}
+.cofreeContent2 {
+  width: 100.7%;
+}
+.products {
+  width: 100%;
+}
+
+.menus {
+  gap: 20px;
+}
+.card {
+  width: 230px;
+  height: 380px;
+  border-radius: 15px;
+}
+.img-fluid {
+  transition: 0.6s ease;
+  filter: drop-shadow(0px 7px 3px rgba(24, 24, 26, 0.4));
+  height: 200px;
+}
+.img-fluid:hover {
+  transform: translateY(-35px);
+  scale: 1.15;
+  filter: drop-shadow(0px 50px 5px rgba(24, 24, 26, 0.33));
+}
+.plusMinusCart {
+  width: 100%;
+  height: 30px;
+  gap: 5px;
+}
+.minusCart,
+.plusCart {
+  width: 35px;
+  height: 30px;
+  font-size: 18px;
+  background-color: #dbd9d9;
+  border-radius: 5px;
+  border: none;
+}
+.countCart {
+  width: 70px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: #85755c solid 1px;
+  background-color: #dbd9d9;
+}
+.buyAddCart {
+  width: 100%;
+  gap: 5px;
+  transform: translateY(15px);
+}
+.addToCart {
+  width: 60%;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e0b231;
+}
+.buyCart {
+  width: 35%;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: wheat;
+}
+/* footer */
+.footer {
+  position: relative;
+  color: #fff;
+  padding: 7rem 0;
+  background-color: #553626;
+}
+.footer .container {
+  position: relative;
+}
+.footer h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  line-height: 1.5;
+}
+.footer .links li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  display: block;
+}
+.footer .links li a {
+  color: #9a886f;
+}
+.footer .links li a:hover {
+  color: #fff;
+}
+.footer .social li {
+  display: inline-block;
+  position: relative;
+}
+.footer .social li a {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background-color: #d5b281;
+  color: #fff;
+}
+.footer .social li a > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer .copyright {
+  color: #9a886f;
+}
+.footer .cta {
+  box-shadow: -15px 15px 0 0 rgba(193, 179, 159, 0.3);
+  padding: 20px;
+  background-color: #d5ab81;
+  top: -150px;
+  position: relative;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.footer .cta:hover{
+  box-shadow:
+  -15px 15px 0 0 rgba(193, 179, 159, 0.3),
+  -30px 30px 0 0 rgba(193, 179, 159, 0.2),
+  -45px 45px 0 0 rgba(193, 179, 159, 0.1);
+}
+.footer .cta h2,
+.footer .cta h3 {
+  line-height: 1.5;
+}
+.footer .cta h3 {
+  font-size: 20px;
+}
+.contactBtn {
+  background-color: #553626;
+}
+.contactbtn:hover {
+  background-color: transparent;
+  border: #553626 solid 1px !important;
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+.scrollAni {
+  animation: show linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 0.6;
+    transform: translateY(140px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0px);
+  }
+}
+.titleScrollAni {
+  animation: titleShow linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+@keyframes titleShow {
+  0%,
+  60% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(-25%);
+  }
+  75% {
+    opacity: 0.8;
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
