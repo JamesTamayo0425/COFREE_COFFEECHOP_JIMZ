@@ -1,0 +1,144 @@
+/* Sir yung code ko po dito ay nireuse ko lng po galing sa login ko po tas tinangal ko yung mga di kailan */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: rgb(19, 14, 13);
+    font-weight: 400;
+}
+
+.input-group-addon{
+    width: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    background-color: #553626; 
+    border-radius: 4px;
+  }
+.input-group-addon:hover{
+    background-color: #f8d085;
+}
+  .input-group {
+    padding: 5px;
+    font-size: 0.9em;
+    border-radius: 5px;
+  }
+
+.regBg{
+    background: rgb(41,19,9);
+    background: linear-gradient(180deg, #291309 0%, #3c2116 46%, #553626 100%);
+    height: auto;
+    min-height: 100svh;
+}
+   
+.regBox{
+    width: 100%;
+}
+.loginForms, .signUpForms{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 10px 16px 4px rgba(0,0,0,0.53);
+    overflow: hidden;
+}
+@media (max-width: 900px) {
+  .regBox{
+    margin: 0;
+    padding: 0;
+    --bs-gutter-x: 0;
+  }
+    .vector{
+        display: none;
+    }
+    
+  }
+@media (max-width: 480px) {
+  .regBg{
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+  .loginForms, .signUpForms{
+    border-radius: 0px;
+    box-shadow: none;
+    height: auto;
+    min-height: 100svh;
+}
+}
+@media (max-width: 319px) {
+    .hoverBtn{
+      margin-top: 25px;
+    }
+}
+@media (max-width: 199px) {
+  .hoverBtn{
+    margin-top: 65px;
+  }
+}
+.vector{
+    width: 85%;
+}
+.hoverBtn {
+    padding: 9px 24px;
+    margin-bottom: 20px;
+    min-width: 120px;
+    max-width: 120px;
+    background-color: #f8d085;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+.hoverBtn:hover{
+    background-color: #f8d085;
+    box-shadow: 0px 20px 10px -6px rgba(197, 166, 110, 0.75);
+    transform: translateY(-8px);
+    scale: 1.03;
+}
+.input-group{
+  height: 50px;
+}
+.input-group-addon i,.input-group-addon2 i{
+  color: white;
+  transform: translateY(12px);
+ }
+ 
+ .input-group input{
+  height: 100%;
+  border: 2px solid rgb(99, 78, 40);
+  font-size: 1.1rem;
+}
+.input-group input:hover{
+  border-color: #f8d085;
+}
+.showNforgotPass{
+  height: 30px;
+  padding-top: 10px;
+  transform: translateY(-10px);
+}
+.showNforgotPass input{
+  transform: translateY(1px);
+}
+.showNforgotPass label{
+  font-size: 0.95rem;
+}
+.leftLogin{
+  background-color: #461e0a;
+}
+.leftLogin p{
+  color: white;
+}
+
+.infoTitle{
+  font-weight: 500;
+  color: #30302f;
+}
